@@ -1,5 +1,5 @@
-feature 'Adding a new bookmark' do
-  scenario 'a user can add a bookmark to BookmarkManager' do
+feature 'Adding a bookmark' do
+  scenario 'Users can add a bookmark' do
     visit('/bookmarks/new')
     fill_in('url', with: 'http://testbookmark.com')
     fill_in('title', with: 'Test Bookmark')
@@ -7,6 +7,4 @@ feature 'Adding a new bookmark' do
 
     expect(page).to have_link('Test Bookmark', href: 'http://testbookmark.com')
   end
-
-
 end
